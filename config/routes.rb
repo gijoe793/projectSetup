@@ -1,4 +1,8 @@
 ProjectSetup::Application.routes.draw do
+  get "pages/about"
+
+  resources :users
+
   get "pages/home"
 
   get "pages/contact"
