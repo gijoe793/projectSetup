@@ -7,7 +7,7 @@
 
 #header
 {
-	background: #ccc;
+	background:gray;
 	padding: 20px;
 }
 
@@ -57,10 +57,11 @@
 {
 	float: left;
 	width: 160px;
-	padding: 20px 0;
+	padding: 0px 0;
 	margin: 0 20px;
 	display: inline;
-	background:maroon;
+	background:gray;
+	left: auto;
 }
 
 #section-navigation ul
@@ -74,7 +75,6 @@
 	margin: 0 0 1em;
 	padding: 0;
 	list-style-type: none;
-	background:green;
 	font-size:large;
 }
 
@@ -103,7 +103,7 @@
 #footer
 {
 	clear: left;
-	background: #ccc;
+	background:gray;
 	text-align: right;
 	padding: 20px;
 	height: 1%;
