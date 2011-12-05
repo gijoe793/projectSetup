@@ -1,4 +1,10 @@
 ProjectSetup::Application.routes.draw do
+  get "pages/images"
+
+  get "pages/doctors"
+
+  get "pages/record"
+
   get "pages/about"
 
   resources :users
