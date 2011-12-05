@@ -30,12 +30,14 @@
 
 #navigation ul li
 {
+	
 	list-style-type: none;
 	display: inline;
 }
 
 #navigation li a
 {
+	width: 179px;
 	display: block;
 	float: left;
 	padding: 5px 10px;

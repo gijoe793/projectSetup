@@ -36,6 +36,7 @@
 
 #navigation li a
 {
+	width: 179px;
 	display: block;
 	float: left;
 	padding: 5px 10px;
