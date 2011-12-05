@@ -21,7 +21,7 @@ ProjectSetup::Application.routes.draw do
     
   match '/doctors', :to => "pages:doctors"
      
-  match '/login', :to => "pages:login"
+  #match '/login', :to => "pages:login"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
