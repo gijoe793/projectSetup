@@ -13,15 +13,15 @@ ProjectSetup::Application.routes.draw do
 
   get "pages/contact"
   
-  match '/home', :to => "pages:home"
+  match '/home', :to => "pages#home"
   
-  match '/record', :to => "pages:record"
+  match '/record', :to => "pages#record"
    
-  match '/images', :to => "pages:images"
+  match '/images', :to => "pages#images"
     
-  match '/doctors', :to => "pages:doctors"
+  match '/doctors', :to => "pages#doctors"
      
-  #match '/login', :to => "pages:login"
+  match '/login', :to => "pages#login"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
