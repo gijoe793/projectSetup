@@ -15,6 +15,8 @@ ProjectSetup::Application.routes.draw do
 
   get "pages/contact"
   
+  match '/pages/home', :to => "pages#home"
+  
   match '/home', :to => "pages#home"
   
   match '/record', :to => "pages#record"

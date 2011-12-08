@@ -43,11 +43,11 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     #@user = User.new
-    if @user.save
-      
-    else
-      @title = "Sign Up"
-    end
+    #if @user.save
+    #  redirect_to @user
+    #else
+    #  @title = "Sign Up"
+    #end
     
     respond_to do |format|
       if @user.save
