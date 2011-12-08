@@ -1,4 +1,10 @@
 ProjectSetup::Application.routes.draw do
+  
+  resources :users
+  
+  resources :sessions, :only => [:new, :create,:destroy]
+
+  #root :to => "pages/home"
   get "pages/signup"
 
   get "pages/images"
@@ -9,7 +15,7 @@ ProjectSetup::Application.routes.draw do
 
   get "pages/about"
 
-  resources :users
+  
 
   get "pages/home"
 
@@ -27,9 +33,11 @@ ProjectSetup::Application.routes.draw do
      
   match '/login', :to => "pages#login"
   
-  match '/signup', :to => "pages#signup"
+  match '/signup', :to => "users#new"
   
-
+  match '/signin', :to => "sessions#new"
+  
+  match '/signout', :to => "sessions#destroy"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
