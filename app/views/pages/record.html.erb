@@ -16,11 +16,16 @@
 	</div>
 	<div id="navigation">
 		<ul>
-			<li><%= link_to "Home", 'home'%></li>
-			<li><%= link_to "Medical Record", 'record'%></li>
-			<li><%= link_to "Scans/Images", 'images' %></li>
-			<li><%= link_to "Doctors", 'doctors' %></li>
-			<li><%= link_to "Log In/Out", 'login' %></li>
+			<li><%= link_to "Home", home_path%></li>
+			<li><%= link_to "Medical Record", record_path%></li>
+			<li><%= link_to "Scans/Images", images_path %></li>
+			<li><%= link_to "Doctors", doctors_path %></li>
+			
+			<% if signed_in? %>
+				<li><%= link_to "Sign out", signout_path%></li>
+				<% else %>
+				<li><%= link_to "Sign in", signin_path%></li>
+			<% end %>
 		</ul>
 	</div>
 	<div id="content-container">

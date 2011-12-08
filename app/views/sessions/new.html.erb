@@ -1,17 +1,68 @@
-<h1>Sign in</h1>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 
-<%= form_for(:session, :url => sessions_path) do |f|%>
-	<div clas="field">
-		<%= f.label :email %><br />
-		<%= f.text_field :email %><br />
-	</div>
-	<div clas="field">
-		<%= f.label :password %><br />
-		<%= f.password_field :password %><br />
-	</div>
-	<div class="actions">
-		<%= f.submit "Sign in"%>
-	</div>
-<% end %>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Website Name</title>
 
-<p> New User? <%= link_to "sign up now!", signup_path%></p>
+<%= stylesheet_link_tag 'home_style_sheet.css', :media => 'screen' %>
+
+<style type="text/css">
+.auto-style1 {
+	text-align: right;
+}
+</style>
+</head>
+
+<body>
+<div id="container">
+	<div id="header">
+		<h1>Personal Medical Record</h1>
+	</div>
+	<div id="navigation">
+		<ul>
+			
+		</ul>
+	</div>
+	<div id="content-container">
+		
+		<div id="content">
+			
+			
+			<h1>Sign in</h1>
+
+			<%= form_for(:session, :url => sessions_path) do |f|%>
+				<div clas="field">
+					<%= f.label :email %><br />
+					<%= f.text_field :email %><br />
+				</div>
+				<div clas="field">
+					<%= f.label :password %><br />
+					<%= f.password_field :password %><br />
+				</div>
+				<div class="actions">
+					<%= f.submit "Sign in"%>
+				</div>
+			<% end %>
+
+			<p> New User? <%= link_to "sign up now!", signup_path%></p>
+
+		</div>
+		<div id="aside">
+			<h3>
+				Instructions
+			</h3>
+			<p>
+				Sign in with you email address and password. If you do not have an account click the "Sign up now!" link. 
+			</p>
+		</div>
+		<div id="footer">
+			Copyright © Site name, 2011
+		</div>
+	</div>
+</div>
+</body>
+
+</html>
+
+
