@@ -6,6 +6,7 @@ gem 'rails', '3.1.1'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 #gem 'sqlite3-ruby', '1.3.3', :require => 'sqlite3'
+#gem 'gravatar_image_tag' '0.1.0'
 group :production do
   gem 'pg', '~> 0.11.0'
   #gem 'therubyracer-heroku', '~>0.8.1.pre3'
@@ -13,6 +14,7 @@ end
 
 group :development, :test do
    gem 'sqlite3', '1.3.4', :require => 'sqlite3'
+   
    gem 'cucumber', '~> 1.1.0'
 end
 
