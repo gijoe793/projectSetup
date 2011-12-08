@@ -1,4 +1,6 @@
 ProjectSetup::Application.routes.draw do
+  get "pages/signup"
+
   get "pages/images"
 
   get "pages/doctors"
@@ -22,6 +24,9 @@ ProjectSetup::Application.routes.draw do
   match '/doctors', :to => "pages#doctors"
      
   match '/login', :to => "pages#login"
+  
+  match '/signup', :to => "pages#signup"
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

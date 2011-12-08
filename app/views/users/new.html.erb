@@ -1,5 +1,82 @@
-<h1>New user</h1>
 
-<%= render 'form' %>
 
-<%= link_to 'Back', users_path %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Website Name</title>
+
+<%= stylesheet_link_tag 'home_style_sheet.css', :media => 'screen' %>
+
+<style type="text/css">
+.auto-style1 {
+	text-align: right;
+}
+</style>
+</head>
+
+<body>
+<div id="container">
+	<div id="header">
+		<h1>
+			Sign Up</h1>
+	</div>
+	<div id="navigation">
+		<ul>
+			<li><%= link_to "Home", 'pages#home'%></li>
+			<li><%= link_to "Medical Record", 'record'%></li>
+			<li><%= link_to "Scans/Images", 'images' %></li>
+			<li><%= link_to "Doctors", 'doctors' %></li>
+			<li><%= link_to "Log In/Out", 'login' %></li>
+		</ul>
+	</div>
+	<div id="content-container">
+		<div id="section-navigation" style="height: 224px">
+			<ul>
+				<li><a href="#">Option 1</a></li>
+				<li><a href="#">Option 2</a></li>
+				<li><a href="#">Option 3</a></li>
+				<li style="height: 24px"><a href="#">Option 4</a></li>
+			</ul>
+		</div>
+		<div id="content">
+			<h1>Sign up</h1>
+			<%= form_for(@user) do |f| %>
+				<div class="field">
+					<%= f.label :name %>
+					<%= f.text_field :name%>
+				</div>
+				<div class="field">
+					<%= f.label :email %>
+					<%= f.text_field :email%>
+				</div>
+				<div class="field">
+					<%= f.label :password %>
+					<%= f.password_field :password%>
+				</div>
+				<div class="field">
+					<%= f.label :password_confirmation, "Confirmation" %>
+					<%= f.password_field :password_confirmation%>
+				</div>
+				<div class="actions">
+					<%= f.submit "Sign up"%>
+				</div>
+			<% end %>
+		</div>
+		<div id="aside">
+			<h3>
+				Instructions
+			</h3>
+			<p>
+				Use this form to create a new user account
+			</p>
+		</div>
+		<div id="footer">
+			Copyright © Site name, 2011
+		</div>
+	</div>
+</div>
+</body>
+
+</html>
