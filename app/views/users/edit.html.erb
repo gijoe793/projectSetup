@@ -1,6 +1,62 @@
-<h1>Editing user</h1>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 
-<%= render 'form' %>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Website Name</title>
 
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>
+<%= stylesheet_link_tag 'home_style_sheet.css', :media => 'screen' %>
+
+<style type="text/css">
+.auto-style1 {
+	text-align: right;
+}
+</style>
+</head>
+
+<body>
+<div id="container">
+	<div id="header">
+		<h1>Personal Medical Record</h1>
+	</div>
+	<div id="navigation">
+		<ul>
+			
+		</ul>
+	</div>
+	<div id="content-container">
+		
+		<div id="content">
+			<h1>Editing user</h1>
+
+			<%= form_for(@user) do |f| %>
+				
+				<%= render 'fields', :f => f %>
+				
+				<div class="actions">
+					<%= f.submit "Update"%>
+				</div>
+			<% end %>
+			
+			<div class="action">
+				<%= gravatar_for @user %>
+				<a href="http://gravatar.com/emails" target=_blank>change</a>
+			</div>
+
+		</div>
+		<div id="aside">
+			<h3>
+				Instructions
+			</h3>
+			<p>
+				Edit the information for your account
+			</p>
+		</div>
+		<div id="footer">
+			Copyright © Site name, 2011
+		</div>
+	</div>
+</div>
+</body>
+
+</html>	

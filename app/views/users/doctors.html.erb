@@ -27,20 +27,29 @@
 	<div id="content-container">
 		
 		<div id="content">
-			<h1>Sign up</h1>
+			<h1>Editing user</h1>
+
 			<%= form_for(@user) do |f| %>
-				<%= render 'fields', :f => f  %>
+				
+				<%= render 'fields', :f => f %>
+				
 				<div class="actions">
-					<%= f.submit "Sign up"%>
+					<%= f.submit "Update"%>
 				</div>
 			<% end %>
+			
+			<div class="action">
+				<%= gravatar_for @user %>
+				<a href="http://gravatar.com/emails" target=_blank>change</a>
+			</div>
+
 		</div>
 		<div id="aside">
 			<h3>
 				Instructions
 			</h3>
 			<p>
-				Sign up to create your Personal Medical Record
+				Edit the information for your account
 			</p>
 		</div>
 		<div id="footer">
@@ -51,5 +60,3 @@
 </body>
 
 </html>
-
-

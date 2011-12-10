@@ -36,6 +36,7 @@ class UsersController < ApplicationController
   # GET /users/1/edit
   def edit
     @user = User.find(params[:id])
+    @title = "Edit User"   
   end
 
   # POST /users
@@ -87,6 +88,16 @@ class UsersController < ApplicationController
     respond_to do |format|
       format.html { redirect_to users_url }
       format.json { head :ok }
+    end
+  end
+  
+  def doctors
+    @user = User.find(params[:id])
+    @title = @user.name
+
+    respond_to do |format|
+      format.html # doctors.html.erb
+      format.json { render :json => @user }
     end
   end
 end

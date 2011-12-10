@@ -26,7 +26,7 @@
 			<% if signed_in? %>
 				<li><%= link_to "Home", user_path(current_user)%></li>	
 			<% else %>
-				<li><%= redirect_to signin_path %></li>
+				#<li><%= redirect_to signin_path %></li>
 			<% end %>
 			
 			<li><%= link_to "Medical Record", record_path%></li>
@@ -55,7 +55,8 @@
 							<br/>
 							<strong>Name</strong> <%= @user.name %><br /">
 							<strong>Email</strong> <%= @user.email %><br /">
-				  			<strong>URL</strong> <%= link_to user_path(@user), @user %>
+				  			<strong>URL</strong> <%= link_to user_path(@user), @user %><br/>
+							<%= link_to "update profile", edit_user_path(@user)%><br /">
 						</h3>
 			  		</td>
 			  			

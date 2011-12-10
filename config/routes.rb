@@ -37,7 +37,7 @@ ProjectSetup::Application.routes.draw do
   
   match '/signin', :to => "sessions#new"
   
-  
+  match '/users/22/doctors', :to => "users#doctors"
   #match '/signout', :to => "sessions#destroy"
   
   match '/signout', :to => "sessions#new"
