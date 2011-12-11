@@ -56,7 +56,16 @@
 							<strong>Name</strong> <%= @user.name %><br /">
 							<strong>Email</strong> <%= @user.email %><br /">
 				  			<strong>URL</strong> <%= link_to user_path(@user), @user %><br/>
-							<%= link_to "update profile", edit_user_path(@user)%><br /">
+							<%= link_to "update profile", edit_user_path(@user)%><br /"><br/>
+							
+							<% if @user.MedicalHistory.any? %>
+								<table class="MedicalHistory" summary="Medical History">
+									<%= render @MedicalHistory %> 
+								</table>
+							<% end %>
+							
+					
+							
 						</h3>
 			  		</td>
 			  			

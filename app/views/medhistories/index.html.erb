@@ -1,0 +1,31 @@
+<h1>Listing medhistories</h1>
+
+<table>
+  <tr>
+    <th>History</th>
+    <th>Allergies</th>
+    <th>Familyhistory</th>
+    <th>Images</th>
+    <th>Appointments</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @medhistories.each do |medhistory| %>
+  <tr>
+    <td><%= medhistory.history %></td>
+    <td><%= medhistory.allergies %></td>
+    <td><%= medhistory.familyhistory %></td>
+    <td><%= medhistory.images %></td>
+    <td><%= medhistory.appointments %></td>
+    <td><%= link_to 'Show', medhistory %></td>
+    <td><%= link_to 'Edit', edit_medhistory_path(medhistory) %></td>
+    <td><%= link_to 'Destroy', medhistory, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Medhistory', new_medhistory_path %>

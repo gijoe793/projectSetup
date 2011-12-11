@@ -1,8 +1,12 @@
 ProjectSetup::Application.routes.draw do
   
+  resources :medhistories
+
   resources :users
   
   resources :sessions, :only => [:new, :create,:destroy]
+  
+  resources :MedicalHistory, :only => [:create, :destroy]
 
   root :to => "pages#signin"
   get "pages/signup"
@@ -14,8 +18,6 @@ ProjectSetup::Application.routes.draw do
   get "pages/record"
 
   get "pages/about"
-
-  
 
   get "pages/home"
 

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>History:</b>
+  <%= @medhistory.history %>
+</p>
+
+<p>
+  <b>Allergies:</b>
+  <%= @medhistory.allergies %>
+</p>
+
+<p>
+  <b>Familyhistory:</b>
+  <%= @medhistory.familyhistory %>
+</p>
+
+<p>
+  <b>Images:</b>
+  <%= @medhistory.images %>
+</p>
+
+<p>
+  <b>Appointments:</b>
+  <%= @medhistory.appointments %>
+</p>
+
+
+<%= link_to 'Edit', edit_medhistory_path(@medhistory) %> |
+<%= link_to 'Back', medhistories_path %>

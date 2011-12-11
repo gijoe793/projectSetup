@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
   def home
     @title = "Home"
+    @MedicalHistory = MedicalHistory.new if signed_in?
   end
 
   def contact
