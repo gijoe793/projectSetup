@@ -42,6 +42,11 @@
 				<%= gravatar_for @user %>
 				<a href="http://gravatar.com/emails" target=_blank>change</a>
 			</div>
+			
+			<div class="action">
+				<%= link_to "Back", user_path(current_user)%>
+			</div>
+			
 
 		</div>
 		<div id="aside">
